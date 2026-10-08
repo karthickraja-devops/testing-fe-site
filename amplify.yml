@@ -8,7 +8,6 @@ frontend:
 
     build:
       commands:
-        - env | grep -e OPTIMIZELY_API_KEY -e OPTIMIZELY_SDK_KEY -e OPTIMIZELY_PROJECT_ID -e OPTIMIZELY_WEBHOOK_SECRET -e API_TOKEN -e TEAM_ID -e EDGE_CONFIG -e FLAGS_SECRET >> .env.production
         - yarn build
 
   artifacts:
@@ -19,4 +18,3 @@ frontend:
   cache:
     paths:
       - node_modules/**/*
-      - .next/cache/**/*
